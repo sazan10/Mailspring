@@ -1,0 +1,16 @@
+name: Linux Build
+on: push
+jobs:
+  build:
+    name: Build on Ubuntu
+    runs-on: ubuntu-20.04
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v4
+      with:
+        ref: 6c3993aa93a414c5a5b4f25f67369916e338d8e6
+
+    - name: Build C Code
+      run: npm run-script build
+
+
